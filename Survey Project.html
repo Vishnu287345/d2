@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)file:///C:/Users/vishn/OneDrive/Desktop/New%20folder/p2.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Project</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: "Bookman Old Style", sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(120deg, #f6d365, #fda085); /* Vibrant background gradient */
+            color: #333;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        /* Background Animation Effect */
+        body:before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(120deg, rgba(246, 211, 101, 0.7), rgba(253, 160, 133, 0.7));
+            z-index: -1;
+            animation: animateBg 10s linear infinite;
+        }
+
+        @keyframes animateBg {
+            0% {
+                filter: hue-rotate(0deg);
+            }
+            100% {
+                filter: hue-rotate(360deg);
+            }
+        }
+
+        /* Header styles */
+        header {
+            background: linear-gradient(to right, #ff4b2b, #ff416c); /* Bold gradient */
+            padding: 20px;
+            color: white;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+
+        header a:hover {
+            color: #ffcccb; /* Hover effect on links */
+        }
+
+        /* Section styling */
+        section {
+            display: none; /* Initially hide all sections */
+            padding: 60px 40px;  /* Larger padding for balanced layout */
+            margin: 40px auto;
+            background: rgba(255, 255, 255, 0.9); /* Transparent background */
+            border-radius: 15px; /* Rounded corners */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Deep shadow */
+            max-width: 1000px; /* Limit section width */
+        }
+
+        /* Typography styles */
+        h1, h2, h3 {
+            margin: 20px 0;
+            text-align: center;
+            color: #333;
+        }
+
+        p {
+            line-height: 1.8;
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        /* Animation for sections on scroll */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        section {
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        /* Image styling */
+        .images img {
+            width: 100%;
+            max-width: 300px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for images */
+        }
+
+    </style>
+    <!-- Include Chart.js from CDN -->
+    <script src="./Survey Project_files/chart.js.download"></script>
+</head>
+<body>
+<center><img src="./Survey Project_files/250_250_1416826958Capture123.jpg" width="200px" align="center" alt="Geethanjali Institute of Science and Technology"></center>
+        <h1>GEETHANJALI INSTITUTE OF SCIENCE AND TECHNOLOGY</h1>
+        <h2><center>DEPARTMENT OF DATA SCIENCE</center></h2>
+        <h3><center>A COMMUNITY SERVICE PROJECT ON FOOD HABITS</center></h3>
+
+    <!-- Header with links to other pages -->
+    <header>
+        <a onclick="showSection(&#39;home&#39;)">Home</a>
+        <a onclick="showSection(&#39;abstract&#39;)">Abstract</a>
+        <a onclick="showSection(&#39;existing-before-survey&#39;)">Existing Before Survey</a>
+        <a onclick="showSection(&#39;proposed-after-survey&#39;)">Proposed After Survey</a>
+        <a onclick="showSection(&#39;survey-data&#39;)">Survey Data</a>
+        <a onclick="showSection(&#39;survey-pictures&#39;)">Survey Pictures</a>
+        <a onclick="showSection(&#39;conclusion&#39;)">Conclusion</a>
+    </header>
+<!-- Home Section -->
+<section id="home" style="display: block;">
+<h2><center><u>INTRODUCTION</u></center></h2>
+<p>
+Food refers to anything that is eaten to provide energy and keep the body healthy. It forms an important part of many Ghanaian customs and traditions. Whilst some foods are not regarded as food at all by some groups, the same foods are delicacies for others. As a caterer you need to learn about the role food plays in the life of the different people you have to cater for. People need food especially because it keeps them healthy and offer enjoyment. If the food you offer for sale does not do any of the above people may not patronize your services. This is why it is important for you to learn how to make wise food choices and provide the kinds of food your varied customers want.</p>
+</section>
+
+    <!-- Abstract Section -->
+    <section id="abstract" style="display: none;">
+        <h2><center><u>ABSTRACT</u></center></h2>
+        <p>
+            This community service project aims to analyze the food habits of local residents. The survey collects data on dietary preferences, frequency of meals, and consumption of various food groups. It also examines factors influencing food choices such as cultural background, health awareness, and economic status. The goal is to identify patterns and suggest areas for nutritional improvement.
+        </p>
+    </section>
+
+    <!-- Existing Before Survey Section -->
+    <section id="existing-before-survey" style="display: none;">
+        <h2><u>EXISTING BEFORE SURVEY</u></h2>
+        <p><strong>1) <u>Limited Nutritional Knowledge</u></strong><br>
+        <strong>Situation:</strong>
+        </p><p>Many members lacked basic understanding of nutrition, including the importance of balanced diets, reading food labels, and understanding portion sizes.</p><strong>Impact:</strong>
+        <p>Poor dietary choices and health issues such as obesity and diabetes.</p>
+        <p><strong>2) <u>High Reliance on Processed Foods</u></strong><br>
+        <strong>Situation:</strong></p><p>Due to busy lifestyles and convenience, many individuals relied heavily on fast food and processed foods which are high in sugars, unhealthy fats and sodium.</p><strong>Impact:</strong><p>Increased the risk of chronic diseases.</p>
+        <p><strong>3) <u>Cultural and Social Influences</u></strong><br>
+        <strong>Situation:</strong></p><p>Cultural traditions often included high-calorie, low-nutrient foods with little emphasis on healthy eating.</p><strong>Impact:</strong><p>Persistent unhealthy eating patterns across generations.</p>
+        <strong>4) <u>Lack of Community Resources</u></strong><br>
+        <strong>Situation:</strong><p>There were few programs promoting nutrition education or providing access to healthy foods.</p><strong>Impact:</strong><p>Limited support to individuals seeking to improve their diets.</p>
+    </section>
+
+    <!-- Proposed After Survey Section -->
+    <section id="proposed-after-survey" style="display: none;">
+        <h2><u>PROPOSED AFTER SURVEY</u></h2>
+        <strong>1) <u>Enhanced Nutritional Knowledge</u></strong><br>
+        <strong>Change:</strong><p>We have taught people to eat balanced diet foods and to make healthier food choices like vegetables, fruits which are rich in vitamins and  minerals</p>
+<strong>Impact:</strong><p>Improved understanding of nutrition led to better dietary decisions and increased awareness of healthy eating benefits.</p>
+        <strong>2) <u>Shift towards Fresh and Whole Foods</u></strong><br>
+        <strong>Change:</strong><p>We have given some suggestions to take initiatives such as to setup community gardens(a piece of land where people can grow flowers, vegetables individually or collectively) and mobile markets(a digital marketing strategy that uses mobile devices to promote products and services to customers)</p><strong>Impact:</strong><p>The partnerships with local farmers also help them to increase access to fresh produce.</p>
+        <strong>3) <u>Culturally Relevant Education</u></strong><br>
+        <strong>Change:</strong><p>We have given an idea to conduct nutrition education programs and to include cultural food practices, offering healthier alternatives within the system of rules.</p><strong>Impact:</strong><p>Improved acceptance and implementation of healthy eating habits within diverse cultural contexts.</p>
+        <strong>4) <u>Increased People’s Engagement</u></strong><br>
+        <strong>Change:</strong><p>People were actively involved in planning and executing nutrition programs, creating a sense of ownership and accountability.</p><strong>Impact:</strong><p>Strong support networks and collective efforts promote healthy eating</p>
+    </section>
+
+    <!-- Survey Data Section with Bar Chart -->
+    <section id="survey-data" style="display: none;">
+        <h2><u>SURVEY DATA</u></h2>
+        <h3>Food Composition</h3>
+        <p>The following chart represents the percentage of proteins, carbohydrates, fats, and water/fruits in food:</p>
+        <div class="chart-container">
+            <canvas id="foodCompositionChart" height="750" style="display: block; box-sizing: border-box; height: 500px; width: 1000px;" width="1500"></canvas>
+        </div>
+    </section>
+
+    <!-- Survey Pictures Section -->
+    <section id="survey-pictures" style="display: none;">
+        <h2><u>SURVEY PICTURES</u></h2>
+        <div class="images">
+            <img src="./Survey Project_files/1.jpg" alt="1" width="200" height="300">
+            <img src="./Survey Project_files/2.jpg" alt="2" width="200" height="300">
+            <img src="./Survey Project_files/3.jpg" alt="3" width="200" height="300">
+            <img src="./Survey Project_files/4.jpg" alt="4" width="200" height="300">
+            <img src="./Survey Project_files/5.jpg" alt="5" width="200" height="300">
+            <img src="./Survey Project_files/6.jpg" alt="6" width="200" height="300">
+        </div>
+    </section>
+
+    <!-- Conclusion Section -->
+    <section id="conclusion" style="display: none;">
+        <h2><u>CONCLUSION</u></h2>
+        <p>The suggestions given during the project guided people to make healthier dietary decisions. We concluded that healthier food choices positively impacted the community. By learning from traditional food habits and integrating healthier alternatives, the community is more aware of the benefits of a nutritious diet. Remember, "Eat good, feel good".</p>
+    </section>
+
+    <!-- Script to control section visibility -->
+    <script>
+        // Function to show the selected section and hide others
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                if (section.id === sectionId) {
+                    section.style.display = 'block';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        }
+
+        // Show abstract section by default on page load
+        showSection('home');
+    </script>
+
+    <!-- Script to create the bar chart -->
+    <script>
+        const ctx = document.getElementById('foodCompositionChart').getContext('2d');
+        const foodCompositionChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Proteins', 'Carbs', 'Fats', 'Water/Fruits'],
+                datasets: [{
+                    label: 'Food Composition (%)',
+                    data: [30, 45, 20, 5],
+                    backgroundColor: [
+                        '#ff6f61',  // Protein
+                        '#f7b733',  // Carbs
+                        '#4ac29a',  // Fats
+                        '#38ef7d'   // Water/Fruits
+                    ],
+                    borderWidth: 1,
+                    borderRadius: 5
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        ticks: {
+                            stepSize: 10
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+
+</body></html>
